@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>form</title>
+</head>
+
+<body>
+    <style>
+        .border {
+            width: auto;
+            height: 20px;
+            background-color: greenyellow;
+            margin: 20px 10px auto 10px;
+            box-shadow: 4px 2px 10px greenyellow;
+        }
+        
+        .feedback_form {
+            place-items: center;
+            border: none;
+            box-shadow: 2px 4px 8px slategray;
+            text-align: center;
+            top: 40%;
+            left: 50%;
+        }
+        
+        input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            border-radius: 20px;
+            outline: none;
+            border: 2px solid green;
+            transition: .25s;
+        }
+        
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="text"]:focus {
+            box-shadow: 2px 4px 8px gray;
+            border-color: pink;
+        }
+        
+        button[type="submit"] {
+            border: 0;
+            background-color: black;
+            display: block;
+            margin: 1cm auto;
+            margin-top: 20px;
+            text-align: center;
+            border: 2px solid #2ecc71;
+            width: 3cm;
+            padding: 14px 10px;
+            outline: none;
+            color: red;
+            border-radius: 20px;
+            transition: 0.25s;
+        }
+        
+        button[type="submit"]:hover {
+            background: #2ecc71;
+        }
+        
+        label {
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-style: italic;
+        }
+        
+        .contact {
+            display: flex;
+            justify-content: center;
+            font-size: 70px;
+            padding-top: 2cm;
+            padding-bottom: 2cm;
+        }
+        
+        .contact .fa-facebook-square {
+            margin-right: 1cm;
+            color: blue;
+            font-size: 30px;
+        }
+        
+        .contact .fa-instagram {
+            margin-left: 10px;
+            color: red;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        
+        .contact .fa-linkedin-square {
+            margin-left: 1cm;
+            color: skyblue;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        
+        .insta_me:hover {
+            color: red;
+        }
+        
+        .contact a {
+            text-shadow: 2px 4px 6px black;
+        }
+        
+        @media(max-width: 1024px) {
+            .feedback_form {
+                width: auto;
+            }
+        }
+    </style>
+    <div class="border"></div>
+    <div class="contact">
+        <a href="https://www.facebook.com/profile.php?id=100011269636827" class="fa fa-facebook-square fb_me" target="_blank" aria-hidden="true"></a>
+        <a href="https://www.instagram.com/deepak_jain2952/" class="fa fa-instagram insta_me" target="_blank" aria-hidden="true"></a>
+        <a href="https://www.linkedin.com/in/deepak-jain-998576181/" class="fa fa-linkedin-square ln_me" target="_blank" aria-hidden="true"></a>
+    </div>
+    <div class="feedback_form">
+        <form action="connect.php" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" name="email">
+                </div>
+                <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" name="password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Feedback</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="ABOUT WEBSITE" name="Feedback">
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10 col-sm-6 col-xs-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" name="city">
+                </div>
+
+                <div class="form-group col-md-2 col-sm-6 col-xs-6">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" name="zip">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">SEND</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
